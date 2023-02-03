@@ -13,30 +13,38 @@ public class EstudianteServImpl implements IEstudianteServi {
 	private IEstudianteRepo estudianteRepo;
 
 	@Override
-	public void crear(Estudiante estudiante) {
+	public Estudiante buscarPorNombre(String nombre) {
+		// TODO Auto-generated method stub
+		return this.estudianteRepo.buscarPorNombre(nombre);
+	}
+
+	@Override
+	public Estudiante buscarPorApellido(String apellido) {
+		// TODO Auto-generated method stub
+		return this.estudianteRepo.buscarPorApellido(apellido);
+	}
+
+	@Override
+	public void insertar(Estudiante estudiante) {
 		// TODO Auto-generated method stub
 		this.estudianteRepo.insertar(estudiante);
+		
 	}
-
 	@Override
-	public void actualizar(Estudiante estudiante) {
+	public Estudiante buscarPorGenero(String genero) {
 		// TODO Auto-generated method stub
-		this.estudianteRepo.actualizar(estudiante);
+		return this.estudianteRepo.buscarPorGenero(genero);
 	}
-
 	@Override
-	public Estudiante buscar(Integer id) {
+	public Estudiante buscarPorCiudad(String ciudad) {
 		// TODO Auto-generated method stub
-		return this.buscar(id);
+		return this.estudianteRepo.buscarPorCiudad(ciudad);
 	}
-
 	@Override
-	public void borrar(Integer id) {
+	public Estudiante buscarPorCedula(String cedula) {
 		// TODO Auto-generated method stub
-		this.estudianteRepo.eliminar(id);
+		return this.estudianteRepo.buscarPorCedula(cedula);
 	}
-	
-
 	
 
 }
