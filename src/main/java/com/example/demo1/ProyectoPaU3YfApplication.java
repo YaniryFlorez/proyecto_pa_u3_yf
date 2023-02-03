@@ -72,7 +72,7 @@ public class ProyectoPaU3YfApplication implements CommandLineRunner{
 
 		//this.estudianteServi.buscarPorApellido("Yaniry");
 		
-		System.out.println(this.estudianteServi.buscarPorNombre("Yaniry"));
+	/*	System.out.println(this.estudianteServi.buscarPorNombre("Yaniry"));
 
 		System.out.println(this.estudianteServi.buscarPorApellido("Florez"));
 		
@@ -80,7 +80,7 @@ public class ProyectoPaU3YfApplication implements CommandLineRunner{
 
 		System.out.println(this.estudianteServi.buscarPorCedula("1172334444"));
 	
-		System.out.println(this.estudianteServi.buscarPorCiudad("Quito"));
+		System.out.println(this.estudianteServi.buscarPorCiudad("Quito"));*/
 
 
 		
@@ -92,7 +92,7 @@ public class ProyectoPaU3YfApplication implements CommandLineRunner{
 		
 		
 		
-	/*	
+		
 		Cliente cli=new Cliente();
 		Cliente cli1=new Cliente();
 		Cliente cli2=new Cliente();
@@ -162,6 +162,7 @@ public class ProyectoPaU3YfApplication implements CommandLineRunner{
 		cli.setRenta(rentas);
 		veh.setRenta(rentas);
 		
+	
 		this.clienteServi.craer(cli);
 		this.clienteServi.craer(cli1);
 		this.clienteServi.craer(cli2);
@@ -173,7 +174,7 @@ public class ProyectoPaU3YfApplication implements CommandLineRunner{
 		
 	//Actualizar
 		
-	/*	Cliente acli=this.clienteServi.buscar("1234569");
+		Cliente acli=this.clienteServi.buscar("1234569");
 		acli.setNombre("José Luis");
 		this.clienteServi.actualizar(acli);
 		
@@ -184,18 +185,18 @@ public class ProyectoPaU3YfApplication implements CommandLineRunner{
 		Renta aren = this.rentaServi.buscar(1);
 		aren.setDias(2);
 		this.rentaServi.actualizar(aren);
-		*/
+		
 		
 		
 	//Borrar
 		
-	/*	this.clienteServi.borrar("1234570");
+	this.clienteServi.borrar("1234570");
 		
 		this.vehiculoServi.borrar("ABC345");
 		
 		this.rentaServi.borrar(1);
 		
-		*/
+		
 		
 		
 	}
