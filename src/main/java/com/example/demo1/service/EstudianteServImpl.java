@@ -45,6 +45,36 @@ public class EstudianteServImpl implements IEstudianteServi {
 		// TODO Auto-generated method stub
 		return this.estudianteRepo.buscarPorCedula(cedula);
 	}
+
+	@Override
+	public Estudiante buscarPorNombreQuryTyped(String nombre) {
+		// TODO Auto-generated method stub
+		return this.buscarPorNombreQuryTyped(nombre);
+	}
+
+	@Override
+	public Estudiante buscarPorNamedQuery(String nombre) {
+		// TOD
+		return this.buscarPorNamedQuery(nombre);
+	}
+
+	@Override
+	public Estudiante buscarPorNombreNamedQuerytype(String nombre) {
+		// TODO Auto-generated method stu
+		return this.buscarPorNombreNamedQuerytype(nombre);
+	}
+
+	@Override
+	public Estudiante buscarPorNombreNativedQuery(String nombre) {
+		// TODO Auto-generated method stub
+		return this.buscarPorNombreNamedQuerytype(nombre);
+	}
+
+	@Override
+	public Estudiante buscarPorNombreNativeQueryTypedNaimed(String nombre) {
+		// TODO Auto-generated method stub
+		return this.buscarPorNombreNativeQueryTypedNaimed(nombre);
+	}
 	
 
 }

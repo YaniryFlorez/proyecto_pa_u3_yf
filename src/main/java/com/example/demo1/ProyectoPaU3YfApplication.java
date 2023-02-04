@@ -72,7 +72,7 @@ public class ProyectoPaU3YfApplication implements CommandLineRunner{
 
 		//this.estudianteServi.buscarPorApellido("Yaniry");
 		
-	/*	System.out.println(this.estudianteServi.buscarPorNombre("Yaniry"));
+		/*System.out.println(this.estudianteServi.buscarPorNombre("Yaniry"));
 
 		System.out.println(this.estudianteServi.buscarPorApellido("Florez"));
 		
@@ -81,6 +81,18 @@ public class ProyectoPaU3YfApplication implements CommandLineRunner{
 		System.out.println(this.estudianteServi.buscarPorCedula("1172334444"));
 	
 		System.out.println(this.estudianteServi.buscarPorCiudad("Quito"));*/
+		
+		
+		System.out.println(this.estudianteServi.buscarPorNombreQuryTyped("Yaniry"));
+		
+		System.out.println(this.estudianteServi.buscarPorNamedQuery("Yaniry"));
+		
+		System.out.println(this.estudianteServi.buscarPorNombreNamedQuerytype("Yaniry"));
+		
+		System.out.println(this.estudianteServi.buscarPorNombreNativedQuery("Yaniry"));
+		
+		//System.out.println(this.estudianteServi.buscarPorNombreNativeQueryTypedNaimed("Yaniry"));
+		
 
 
 		
@@ -92,7 +104,7 @@ public class ProyectoPaU3YfApplication implements CommandLineRunner{
 		
 		
 		
-		
+	/*	
 		Cliente cli=new Cliente();
 		Cliente cli1=new Cliente();
 		Cliente cli2=new Cliente();
@@ -194,7 +206,8 @@ public class ProyectoPaU3YfApplication implements CommandLineRunner{
 		
 		this.vehiculoServi.borrar("ABC345");
 		
-		this.rentaServi.borrar(1);
+		this.rentaServi.borrar(1);*/
+		
 		
 		
 		

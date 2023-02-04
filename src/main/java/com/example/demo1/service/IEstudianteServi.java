@@ -14,4 +14,15 @@ public void insertar (Estudiante estudiante);
 	public Estudiante buscarPorCiudad(String ciudad);
 	
 	public Estudiante buscarPorCedula(String cedula);
+	
+	public Estudiante buscarPorNombreQuryTyped(String nombre);
+	
+	public Estudiante buscarPorNamedQuery(String nombre);
+	
+	public Estudiante buscarPorNombreNamedQuerytype(String nombre);
+	
+	public Estudiante buscarPorNombreNativedQuery(String nombre);
+	
+	public Estudiante buscarPorNombreNativeQueryTypedNaimed(String nombre);
+	
 }
