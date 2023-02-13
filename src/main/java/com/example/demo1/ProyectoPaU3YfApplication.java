@@ -19,6 +19,7 @@ import com.example.demo1.modelo.Vehiculo;
 import com.example.demo1.service.IAutomovilService;
 import com.example.demo1.service.IClienteServi;
 import com.example.demo1.service.IEstudianteServi;
+import com.example.demo1.service.IHotelService;
 import com.example.demo1.service.IRentaServi;
 import com.example.demo1.service.IVehiculoServi;
 
@@ -40,8 +41,8 @@ public class ProyectoPaU3YfApplication implements CommandLineRunner{
 	@Autowired
 	private IAutomovilService autoServi;
 	
-	
 
+	
 	public static void main(String[] args) {
 		SpringApplication.run(ProyectoPaU3YfApplication.class, args);
 	}
@@ -49,56 +50,19 @@ public class ProyectoPaU3YfApplication implements CommandLineRunner{
 	@Override
 	public void run(String... args) throws Exception {
 		// TODO Auto-generated method stub
+		Estudiante estu=new Estudiante();
 		
-              Automovil auto=new Automovil();
-              /*  auto.setPlaca("ABC345");
-              auto.setAño(LocalDateTime.now());
-              auto.setColor("Blanco");
-              auto.setMarca("Toyota");
-              auto.setModelo("Camioneta");
-              auto.setPrecio(new BigDecimal(19000));
-              auto.setTipo("Familiar");
-              
-              Automovil auto1=new Automovil();
-              auto1.setPlaca("ABC123");
-              auto1.setAño(LocalDateTime.now());
-              auto1.setColor("Rojo");
-              auto1.setMarca("Mercedez");
-              auto1.setModelo("Convertible");
-              auto1.setPrecio(new BigDecimal(25000));
-              auto1.setTipo("Individual");
-              
-              Automovil auto2=new Automovil();
-              auto2.setPlaca("ABF876");
-              auto2.setAño(LocalDateTime.now());
-              auto2.setColor("Azul");
-              auto2.setMarca("Mazda");
-              auto2.setModelo("Campero");
-              auto2.setPrecio(new BigDecimal(15000));
-              auto2.setTipo("Familiar");
-              
-              this.autoServi.insertar(auto);
-              this.autoServi.insertar(auto1);
-              this.autoServi.insertar(auto2);
-              	*/
-              
+		//this.estudianteServi.actualizar("Quito", "Femenino");
 		
-		System.out.println(this.autoServi.buscarPorPlacaTypedQuery("ABC345"));
-		System.out.println(this.autoServi.buscarPorColorTypedQuery("Blanco"));
-		System.out.println(this.autoServi.buscarporMarcaTypedQuery("Toyota"));
-		System.out.println("_____________________________________________________________________");
-		System.out.println(this.autoServi.buscarPorPlacaNamedQuery("ABC123"));
-		System.out.println(this.autoServi.buscarPorColorNamedQuery("Rojo"));
-		System.out.println(this.autoServi.buscarporMarcaNamedQuery("Mercedez"));
-		System.out.println("_____________________________________________________________________");
-		System.out.println(this.autoServi.buscarPorPlacaNativeQuery("ABC123"));
-		System.out.println(this.autoServi.buscarPorColorNativeQuery("Azul"));
-		System.out.println(this.autoServi.buscarporMarcaNativeQuery("Mazda"));
-		System.out.println("_____________________________________________________________________");
-		System.out.println(this.autoServi.buscarPorPlacaNamedNativeQuery("ABF876"));
-		System.out.println(this.autoServi.buscarPorColorNamedNativeQuery("Rojo"));
-		System.out.println(this.autoServi.buscarporMarcaNamedNativeQuery("Mazda")); 
+		this.estudianteServi.Eliminar("Tulcan");
 		
+		
+		
+		
+		
+		
+		
+             
 	
 		
 		

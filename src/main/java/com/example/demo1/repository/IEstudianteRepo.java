@@ -15,4 +15,8 @@ public interface IEstudianteRepo {
 	public Estudiante buscarPorCiudad(String ciudad);
 	
 	public Estudiante buscarPorCedula(String cedula);
+	
+    public Estudiante actualizar(String ciudad, String genero);
+	
+	public Estudiante Eliminar(String ciudad);
 }

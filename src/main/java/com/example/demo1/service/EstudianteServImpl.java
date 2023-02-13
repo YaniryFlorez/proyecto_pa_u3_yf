@@ -45,6 +45,23 @@ public class EstudianteServImpl implements IEstudianteServi {
 		// TODO Auto-generated method stub
 		return this.estudianteRepo.buscarPorCedula(cedula);
 	}
+
+	@Override
+	public Estudiante actualizar(String ciudad, String genero) {
+		// TODO Auto-generated method stub
+		this.estudianteRepo.actualizar(ciudad, genero);
+		return null;
+	}
+
+	@Override
+	public Estudiante Eliminar(String ciudad) {
+		// TODO Auto-generated method stub
+		this.estudianteRepo.Eliminar(ciudad);
+		
+		return null;
+	}
+
+	
 	
 
 }

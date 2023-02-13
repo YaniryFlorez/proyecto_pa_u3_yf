@@ -71,5 +71,30 @@ public class EstudianteRepoImpl implements IEstudianteRepo{
 	}
 
 
+	
+
+	@Override
+	public Estudiante Eliminar(String ciudad) {
+		// TODO Auto-generated method stub
+		jakarta.persistence.Query query = this.entityManager.createQuery(
+				"DELETE  from Estudiante e  WHERE e.ciudad = :dateCiudad");
+		query.setParameter("dateCiudad",ciudad);
+		query.executeUpdate();
+		return null;
+	}
+
+	@Override
+	public Estudiante actualizar(String ciudad, String genero) {
+		// TODO Auto-generated method stub
+		jakarta.persistence.Query query = this.entityManager.createQuery(
+				"UPDATE Estudiante e set e.genero=: dateGenero WHERE e.ciudad = :dateCiudad");
+		query.setParameter("dateCiudad",ciudad);
+		query.setParameter("dateGenero", genero);
+		query.executeUpdate();
+		
+		return null;
+	}
+
+	
 
 }
