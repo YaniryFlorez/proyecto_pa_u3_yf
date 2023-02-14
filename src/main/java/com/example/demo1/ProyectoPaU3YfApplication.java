@@ -14,8 +14,11 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import com.example.demo1.modelo.Automovil;
 import com.example.demo1.modelo.Cliente;
 import com.example.demo1.modelo.Estudiante;
+import com.example.demo1.modelo.Habitacion;
+import com.example.demo1.modelo.Hotel;
 import com.example.demo1.modelo.Renta;
 import com.example.demo1.modelo.Vehiculo;
+import com.example.demo1.repository.IHotelRepo;
 import com.example.demo1.service.IAutomovilService;
 import com.example.demo1.service.IClienteServi;
 import com.example.demo1.service.IEstudianteServi;
@@ -26,23 +29,11 @@ import com.example.demo1.service.IVehiculoServi;
 @SpringBootApplication
 public class ProyectoPaU3YfApplication implements CommandLineRunner{
 	
-	@Autowired
-	private IEstudianteServi estudianteServi;
 	
 	@Autowired
-	private IVehiculoServi vehiculoServi;
-	
-	@Autowired
-	private IClienteServi clienteServi;
-	
-	@Autowired
-	private IRentaServi rentaServi;
-	
-	@Autowired
-	private IAutomovilService autoServi;
-	
+	private IHotelRepo hotelRepo;
 
-	
+
 	public static void main(String[] args) {
 		SpringApplication.run(ProyectoPaU3YfApplication.class, args);
 	}
@@ -50,11 +41,17 @@ public class ProyectoPaU3YfApplication implements CommandLineRunner{
 	@Override
 	public void run(String... args) throws Exception {
 		// TODO Auto-generated method stub
-		Estudiante estu=new Estudiante();
 		
-		//this.estudianteServi.actualizar("Quito", "Femenino");
+		List<Hotel> lista= this.hotelRepo.buscarHotelInnerJoin(null);
+		for(Hotel h: lista) {
+			System.out.println("Las habitaciones de "+h.getNombre());
+			for(Habitacion ha : h.getHabitaciones()) {
+				
+			}
+		}
 		
-		this.estudianteServi.Eliminar("Tulcan");
+		this.hotelRepo.buscarHotelInnerJoin("VIP");
+		
 		
 		
 		
