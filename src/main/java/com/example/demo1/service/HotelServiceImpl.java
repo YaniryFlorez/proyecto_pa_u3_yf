@@ -12,4 +12,22 @@ public class HotelServiceImpl implements IHotelService{
 		return null;
 	}
 
+	@Override
+	public List<Hotel> buscarHotelOuterRightJoin() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<Hotel> buscarHotelOuterLefttJoin() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<Hotel> buscarHotelOuterFulltJoin() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
 }

@@ -42,31 +42,58 @@ public class ProyectoPaU3YfApplication implements CommandLineRunner{
 	public void run(String... args) throws Exception {
 		// TODO Auto-generated method stub
 		
-		List<Hotel> lista= this.hotelRepo.buscarHotelInnerJoin(null);
-		for(Hotel h: lista) {
+		List<Hotel> lista1= this.hotelRepo.buscarHotelInnerJoin(null);
+		for(Hotel h: lista1) {
 			System.out.println("Las habitaciones de "+h.getNombre());
-			for(Habitacion ha : h.getHabitaciones()) {
-				
+			for(Habitacion ha1 : h.getHabitaciones()) {
+				System.out.println(h.getNombre());
+				System.out.println(h.getHabitaciones());
 			}
+			System.out.println();
 		}
 		
-		this.hotelRepo.buscarHotelInnerJoin("VIP");
+		//this.hotelRepo.buscarHotelInnerJoin("VIP");
+		
+		List<Hotel> lista= this.hotelRepo.buscarHotelFetchJoin("VIP");
+		for(Hotel h: lista) {
+			System.out.println("Las habitaciones de "+h.getNombre());
+			/*for(Habitacion ha : h.getHabitaciones()) {
+				System.out.println(h.getNombre());
+				System.out.println(h.getHabitaciones());*/
+			}
+			System.out.println();
 		
 		
+		List<Hotel> lista2= this.hotelRepo.buscarHotelOuterFulltJoin("VIP");
+		for(Hotel h: lista2) {
+			System.out.println("Las habitaciones de "+h.getNombre());
+			/*for(Habitacion ha : h.getHabitaciones()) {
+				System.out.println(h.getNombre());
+				System.out.println(h.getHabitaciones());*/
+			}
+			System.out.println();
 		
 		
-		
-		
-		
-		
-             
+		List<Hotel> lista3= this.hotelRepo.buscarHotelOuterLefttJoin("VIP");
+		for(Hotel h: lista3) {
+			System.out.println("Las habitaciones de "+h.getNombre());
+			/*for(Habitacion ha : h.getHabitaciones()) {
+				System.out.println(h.getNombre());
+				System.out.println(h.getHabitaciones());*/
+			}
+			System.out.println();
+	
+	
+	   List<Hotel> lista4= this.hotelRepo.buscarHotelOuterRightJoin("VIP");
+	    for(Hotel h: lista4) {
+		     System.out.println("Las habitaciones de "+h.getNombre());
+		  /*for(Habitacion ha : h.getHabitaciones()) {
+			System.out.println(h.getNombre());
+			System.out.println(h.getHabitaciones());*/
+		}
+		System.out.println();
 	
 		
-		
-		
-
-		
-		
-	}
-
+      }
 }
+

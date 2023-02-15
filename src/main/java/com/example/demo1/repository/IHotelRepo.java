@@ -17,6 +17,15 @@ public interface IHotelRepo {
 	public List<Hotel> buscarHotelWhereJoin(String tipoHabitacion);
 
 	public List<Hotel> buscarHotelFetchJoin(String tipoHabitacion);
+	
+
+	public List<Hotel> buscarHotelOuterRightJoin();
+
+	public List<Hotel> buscarHotelOuterLefttJoin();
+
+	public List<Hotel> buscarHotelOuterFulltJoin();
+
+	
 
 
 }

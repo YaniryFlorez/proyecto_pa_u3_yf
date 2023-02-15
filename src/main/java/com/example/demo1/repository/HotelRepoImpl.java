@@ -23,19 +23,29 @@ public class HotelRepoImpl implements IHotelRepo {
 		// TODO Auto-generated method stub
 		Query myQuery = this.entityManager.createQuery("SELECT h FROM Hotel h INNER JOIN h.habitaciones ha.tipo =:datoTipo ", Hotel.class);
 		myQuery.setParameter("", tipoHabitacion);
-		return myQuery.getResultList();
+		List<Hotel> list = myQuery.getResultList();
+		list.forEach(a -> a.getHabitaciones().size());
+		return list;
+	
 	}
 
 	@Override
 	public List<Hotel> buscarHotelOuterRightJoin(String tipoHabitacion) {
 		// TODO Auto-generated method stub
-		return null;
+		Query myQuery = this.entityManager.createQuery("SELECT h FROM Hotel h Right JOIN h.habitaciones ha.tipo =:datoTipo ", Hotel.class);
+		myQuery.setParameter("", tipoHabitacion);
+		List<Hotel> list = myQuery.getResultList();
+		list.forEach(a -> a.getHabitaciones().size());
+		return list;
 	}
 
 	@Override
 	public List<Hotel> buscarHotelOuterLefttJoin(String tipoHabitacion) {
-		// TODO Auto-generated method stub
-		return null;
+		Query myQuery = this.entityManager.createQuery("SELECT h FROM Hotel h Left JOIN h.habitaciones ha.tipo =:datoTipo ", Hotel.class);
+		myQuery.setParameter("", tipoHabitacion);
+		List<Hotel> list = myQuery.getResultList();
+		list.forEach(a -> a.getHabitaciones().size());
+		return list;
 	}
 
 	@Override
@@ -53,6 +63,38 @@ public class HotelRepoImpl implements IHotelRepo {
 	@Override
 	public List<Hotel> buscarHotelFetchJoin(String tipoHabitacion) {
 		// TODO Auto-generated method stub
+		Query myQuery = this.entityManager.createQuery("SELECT h FROM Hotel h Left JOIN FETCH h.habitaciones ha.tipo =:datoTipo ", Hotel.class);
+		myQuery.setParameter("", tipoHabitacion);
+		List<Hotel> list = myQuery.getResultList();
+		
+		return list;
+		
+	}
+
+	@Override
+	public List<Hotel> buscarHotelOuterRightJoin() {
+		// TODO Auto-generated method stub
+		Query myQuery = this.entityManager.createQuery("SELECT h FROM Hotel h Right JOIN FETCH h.habitaciones ", Hotel.class);
+		
+		return null;
+	}
+
+	@Override
+	public List<Hotel> buscarHotelOuterLefttJoin() {
+		// TODO Auto-generated method stub
+		Query myQuery = this.entityManager.createQuery("SELECT h FROM Hotel h Letf JOIN FETCH h.habitaciones ", Hotel.class);
+        List<Hotel> list = myQuery.getResultList();
+        
+		
+		return null;
+	}
+
+	@Override
+	public List<Hotel> buscarHotelOuterFulltJoin() {
+		// TODO Auto-generated method stub
+		Query myQuery = this.entityManager.createQuery("SELECT h FROM Hotel h Full JOIN FETCH h.habitaciones ", Hotel.class);
+
+		
 		return null;
 	}
 
